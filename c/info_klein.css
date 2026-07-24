@@ -1,0 +1,50 @@
+.image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.images {
+  order: 3;
+}
+
+table {
+  position: relative;
+  left: 0;
+  margin-right: 0;
+  order: 1;
+  max-height: unset;
+  overflow-y: unset;
+}
+
+.imprint-table {
+  display: table;
+  table-layout: fixed;
+  width:100%;
+}
+.imprint-table td{
+  text-align: right !important;
+}
+
+.camera_container{
+  order:2;
+}
+
+tr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+th {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+td {
+  flex: 1 1 auto;
+  text-align: right;
+  min-width: 0;
+}
+

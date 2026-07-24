@@ -1,0 +1,167 @@
+/* * {} */
+
+/* ----------------------------Allgemeines Layout----------------------------------------------------------- */
+main {
+  display: block;
+  margin: 25px;
+  padding: 0;
+  margin-top: 0%;
+    margin-top: 80px;
+}
+
+/* .main-nav {
+  font-weight: normal;
+} */
+
+/* figure img {
+  width: 400px;   or 400px, or 50% 
+   width: 500px;
+  max-width: 85%;
+  height: auto;
+
+
+/* only apply table display rules for imprint table */
+.imprint-table {
+  display: table;
+ /*  table-layout: fixed; */
+  width:35%;
+}
+/* bild und steckbrief nebeneinander */
+div {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.image-container {
+  width: 60%;
+}
+
+.images {
+  display: flex;
+  flex-direction: column; /* Ordnet Elemente untereinander */
+  gap: 10px; /* Abstand zwischen den Bildern */
+  align-items: flex-start; /* Optional: linksbündig */
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* .untere_images {
+  position: absolute;
+  top: 5000px;
+} */
+.untere_images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.camera_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+img {
+  size: 100%;
+  /*  margin-left: 2em; */
+  /*height: 100%;
+  max-height: calc(100vh - 150px);
+  width: auto;
+  object-fit: contain; */
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* ----------------------------Beschreibungstext----------------------------------------------------------- */
+/* tabellenüberschriften auf erster zeile positionieren */
+table {
+  /* position: fixed; */
+  position: absolute;
+  left: 60%;
+  /*   top:40%; */
+
+  margin-right: 5%;
+  
+
+  border-collapse: collapse;
+  /* /* ---table is fixed but when it is too big for the screen it becomes scrollable ---
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+  display: block;
+   border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000; */
+
+}
+/* tr {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+} */
+
+tr:first-of-type {
+  border-top: none;
+}
+
+/* mehr weißraum in tabellenzeilen */
+th {
+  vertical-align: top;
+  padding: 0.75em 0.5em;
+  padding-right: 2em;
+  white-space: nowrap; /* kein zeilenumbruch bei tabellenüberschriften */
+  font-weight: normal;
+
+}
+td {
+  padding: 0.75em 0.5em;
+  vertical-align: top;
+  text-align: left;
+  text-transform: none;
+  /* keep font size consistent even when browser wants to increase size */
+  /* font-size: 14px !important;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%; */
+}
+
+td.wrapped-below {
+  text-align: justify;
+  padding-top: 0;
+}
+
+
+
+/* -----------------------------------Three.js-------------------------------------------------- */
+/* WebGL Canvas */
+/* .webgl {
+  position: fixed; /Bleibt hinter allen Elementen 
+  top: 0;
+  left: 0;
+  width: 100%;  Deckt die gesamte Breite ab 
+  height: 100%; Deckt die gesamte Höhe ab 
+  z-index: -100;  Liegt hinter allen anderen Elementen
+} */
+
+/* .webgl {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: -100; 
+} */
+.webgl {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  margin-bottom: 7%;
+}
+
+/* ----------To do----------- */
+/*
+
+
+*/

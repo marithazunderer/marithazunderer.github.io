@@ -1,0 +1,379 @@
+/* ================= allgemeines ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /*   font-family: "M PLUS 1 Code", monospace; */
+  /* font-family: IBM Plex Sans;
+  font-size: 16px;
+  font-weight: 600; */
+  font-optical-sizing: auto;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* background-color: rgb(20, 230, 230);  */
+}
+
+a {
+  color: inherit;
+}
+a:hover,
+a:focus,
+a:active {
+  font-weight: 700;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul, tr, a {
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+
+}
+
+/* ================= navigation ================= */
+
+.main-nav {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  font-weight: 600;
+  
+  /* border-bottom: 1px solid #000000; */
+}
+
+/* .main-nav.stuck {
+  position: fixed;
+  top: 0;
+  bottom: auto;
+} */
+
+/* dropdown works menu */
+/* .works-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  display: none;
+}
+
+.main-nav:hover .works-nav {
+  display: block;
+} */
+
+.works-dropdown {
+  position: relative;
+}
+.works-nav {
+  padding-top: 10px;
+  position: absolute;
+  /*   top: 100%; */
+  top: -5500px;
+  right: 0;
+  display: block;
+  flex-direction: column;
+  /*   background: rgba(255, 255, 255, 0.4);*/
+/*   backdrop-filter: blur(12px);  */
+  /* background-color: white; */
+  border-collapse: collapse;
+  /* border: 1px solid #000000; */
+
+  /* border-style: solid; */
+
+  text-align: right; /* 
+  transition: all 0.3s ; */
+  
+}
+
+.works-nav.sichtbar {
+  top: 31px;
+}
+
+.works-button:hover {
+  font-weight: 700;
+  
+  cursor: pointer;
+}
+
+.works-dropdown:hover .works-nav {
+  top: 31px;
+}
+
+tr {
+  border-top: 1px solid #000000;
+}
+
+tr:first-of-type {
+  border-top: none;
+}
+
+/* mehr weißraum in tabellenzeilen */
+th {
+  vertical-align: top;
+  padding: 0.75em 0.5em;
+  
+}
+td {
+  padding: 0.75em 0.5em;
+  vertical-align: top;
+  text-align: right;
+  
+}
+
+/* main {
+  margin-top: 8rem;
+} */
+
+nav ul {
+  list-style-type: none;
+  /* hier das entscheidende! */
+  display: flex;
+  align-items: center;
+  gap: 5em;
+  padding: 1em 2em 1em;
+  
+  
+}
+nav li.middle {
+  flex: 1;
+  text-align: center;
+  
+}
+
+nav li.right {
+  margin-left: auto;
+  order: 3;
+}
+
+nav li.works-dropdown {
+  margin-left: 0;
+  order: 2;
+}
+
+/* ================= slideshow header hero images ================= */
+header {
+  position: relative;
+}
+
+main {
+  scroll-margin-top: 5rem;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  width: auto;
+  margin-bottom: 1em;
+}
+
+#hero img {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* transition: all 0.5s ease-in; */
+  width: 95%;
+  height: 75%;
+  object-fit: cover;
+}
+
+#hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transition: all 0.5s ease-in; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* wird via Javascript ein/ausgeschaltet */
+.unsichtbar {
+  opacity: 0;
+}
+
+/* ================= projektübersicht ================= */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  margin-bottom: 25px;
+}
+
+/* Hover zoom für index bilder */
+main article figure {
+  overflow: hidden;
+}
+
+main article figure img {
+  transition: transform 200ms ease;
+  will-change: transform;
+}
+
+article:hover figure img {
+  transform: scale(1.06);
+}
+
+/* show crosshair cursor when hovering article figure images */
+/* article figure img:hover {
+  cursor: crosshair;
+} */
+
+article figure {
+  /* position*/
+  position: relative;
+}
+
+/* article figcaption {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 10;
+} */
+article figcaption {
+  display: none;
+}
+
+article img {
+  height: 100%;
+  object-fit: cover;
+}
+
+article ul {
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  left: 0;
+  grid-column: 2;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+
+/* article:hover ul {
+  font-weight: 700;
+} */
+
+/* article:hover ul li {
+  font-weight: 700;
+} */
+
+#arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  margin: 0;
+  transform-origin: center center;
+  transform: translateX(-50%) rotate(90deg);
+  z-index: 2;
+  cursor: pointer;
+  
+}
+
+#arrow img {
+  display: block;
+  width: 1rem;
+  height: auto;
+}
+
+#packaging {
+  position: relative;
+  grid-column: 1 / span 2;
+}
+
+#kreis {
+  position: absolute;
+
+  bottom: -1rem;
+  left: 11%;
+  width: 23rem;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+#packaging:hover #kreis {
+  opacity: 20%;
+}
+
+#kreis img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: none;
+  transition: none;
+}
+
+#manometer {
+  grid-row: 1 / span 3;
+  grid-column: 9 / span 3;
+}
+
+#diy {
+  grid-row: 2;
+  grid-column: 5 / span 2;
+}
+
+#camera {
+  grid-row: 3;
+  grid-column: 2 / span 2;
+}
+
+#interaction {
+  grid-row: 4 / span 2;
+  grid-column: 6 / span 2;
+}
+
+#sponge {
+  grid-row: 5 / span 3;
+  grid-column: 2 / span 2;
+}
+
+#webdesign {
+  grid-row: 6;
+  grid-column: 9 / span 2;
+}
+
+#keyshot {
+  grid-row: 7;
+  grid-column: 3 / span 2;
+}
+
+/* #packaging p {
+  position: absolute;
+
+  Festlegen der Transition incl der Dauer (hier 0.5 Sekunden) 
+  transition: ease;
+} */
+
+footer {
+  position: relative;
+  bottom: 0px;
+  justify-self: center;
+  z-index: 100;
+  background-color: transparent;
+  padding: 1em 2em 1em;
+  margin-top: 100px;
+}
+
+/* --------------to do-------------------- */
+/* 
+ */
