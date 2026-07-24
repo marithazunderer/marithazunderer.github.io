@@ -1,0 +1,17 @@
+{
+  "name": "scrolling",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7",
+    "vite-plugin-restart": "^1.0.0"
+  },
+  "dependencies": {
+    "three": "^0.166.1"
+  }
+}
